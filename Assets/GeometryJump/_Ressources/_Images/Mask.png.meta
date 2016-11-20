@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: 311afd8a5fb4240aba007cab7045f30c
+timeCreated: 1451913333
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Superhero-Masks_0
+    21300002: Superhero-Masks_1
+    21300004: Superhero-Masks_2
+    21300006: Superhero-Masks_3
+    21300008: Superhero-Masks_4
+    21300010: Superhero-Masks_5
+    21300012: Superhero-Masks_6
+    21300014: Superhero-Masks_7
+    21300016: Superhero-Masks_8
+    21300018: Superhero-Masks_9
+    21300020: Superhero-Masks_10
+    21300022: Superhero-Masks_11
+    21300024: Superhero-Masks_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: 2
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Superhero-Masks_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 392
+        width: 115
+        height: 86
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.43404335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.638306, y: 44.90509}
+        - {x: -51.638306, y: 36.90509}
+        - {x: -51.638306, y: -33.09491}
+        - {x: 52.361694, y: -33.09491}
+        - {x: 52.361694, y: 26.90509}
+        - {x: 43.361694, y: 44.90509}
+    - name: Superhero-Masks_1
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 390
+        width: 116
+        height: 107
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3216878}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36.668274, y: 65.64285}
+        - {x: -51.668274, y: 52.642853}
+        - {x: -51.668274, y: -31.357147}
+        - {x: 53.331726, y: -31.357147}
+        - {x: 53.331726, y: 49.642853}
+        - {x: 27.331726, y: 65.64285}
+    - name: Superhero-Masks_2
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 389
+        width: 113
+        height: 62
+      alignment: 9
+      pivot: {x: 0.49999973, y: 0.4667314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.90329, y: 29.973053}
+        - {x: -50.90329, y: 22.973053}
+        - {x: -50.90329, y: -9.026947}
+        - {x: -42.90329, y: -26.026947}
+        - {x: 32.09671, y: -26.026947}
+        - {x: 51.09671, y: -18.026947}
+        - {x: 51.09671, y: 18.973053}
+        - {x: 42.09671, y: 29.973053}
+    - name: Superhero-Masks_3
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 275
+        width: 124
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52062625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54.361702, y: 33.92015}
+        - {x: -55.638298, y: 33.92015}
+        - {x: -55.638298, y: -35.07985}
+        - {x: 52.361702, y: -35.07985}
+        - {x: 55.361702, y: -30.07985}
+        - {x: 56.361702, y: -23.07985}
+        - {x: 56.361702, y: 28.92015}
+    - name: Superhero-Masks_4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 276
+        width: 118
+        height: 84
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4263342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52.963257, y: 44.759583}
+        - {x: -52.963257, y: -19.240417}
+        - {x: -44.963257, y: -32.240417}
+        - {x: 52.036743, y: -32.240417}
+        - {x: 53.036743, y: -27.240417}
+        - {x: 53.036743, y: 43.759583}
+        - {x: 51.036743, y: 44.759583}
+    - name: Superhero-Masks_5
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 279
+        width: 139
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4999998, y: 0.44198838}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -62.570557, y: 41.063614}
+        - {x: -62.570557, y: 2.063614}
+        - {x: -45.570557, y: -31.936386}
+        - {x: 43.429443, y: -31.936386}
+        - {x: 54.429443, y: -26.936386}
+        - {x: 63.429443, y: -2.936386}
+        - {x: 63.429443, y: 41.063614}
+    - name: Superhero-Masks_6
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 154
+        width: 126
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56.22824, y: 34.71277}
+        - {x: -56.22824, y: -21.287231}
+        - {x: -50.22824, y: -34.28723}
+        - {x: 50.77176, y: -34.28723}
+        - {x: 57.77176, y: -20.287231}
+        - {x: 57.77176, y: 34.71277}
+    - name: Superhero-Masks_7
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 160
+        width: 118
+        height: 85
+      alignment: 9
+      pivot: {x: 0.5, y: 0.40900126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52.1557, y: 46.039627}
+        - {x: -53.1557, y: 45.039627}
+        - {x: -53.1557, y: -15.960373}
+        - {x: -49.1557, y: -30.960373}
+        - {x: 53.8443, y: -30.960373}
+        - {x: 53.8443, y: 46.039627}
+    - name: Superhero-Masks_8
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 160
+        width: 137
+        height: 99
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37499154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 62.429413, y: 39.704834}
+        - {x: 59.429413, y: 48.704834}
+        - {x: 48.429413, y: 56.704834}
+        - {x: -50.570587, y: 56.704834}
+        - {x: -61.570587, y: 42.704834}
+        - {x: -61.570587, y: 7.704834}
+        - {x: -55.570587, y: -19.295166}
+        - {x: -50.570587, y: -33.295166}
+        - {x: 45.429413, y: -33.295166}
+        - {x: 60.429413, y: -8.295166}
+        - {x: 62.429413, y: 1.704834}
+    - name: Superhero-Masks_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 43
+        width: 126
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50.920696, y: 35.591877}
+        - {x: -56.920696, y: 24.591877}
+        - {x: -56.920696, y: -32.408123}
+        - {x: -54.920696, y: -34.408123}
+        - {x: 57.079304, y: -34.408123}
+        - {x: 57.079304, y: 25.591877}
+        - {x: 44.079304, y: 35.591877}
+    - name: Superhero-Masks_10
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 45
+        width: 117
+        height: 78
+      alignment: 9
+      pivot: {x: 0.5, y: 0.44711176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52.758224, y: 39.589226}
+        - {x: -52.758224, y: -31.410774}
+        - {x: 53.241776, y: -31.410774}
+        - {x: 53.241776, y: 30.589226}
+        - {x: 43.241776, y: 39.589226}
+    - name: Superhero-Masks_11
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 57
+        width: 130
+        height: 74
+      alignment: 9
+      pivot: {x: 0.50000024, y: 0.116739534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.378174, y: 59.1105}
+        - {x: -58.378174, y: 33.1105}
+        - {x: -58.378174, y: -7.8894997}
+        - {x: 58.621826, y: -7.8894997}
+        - {x: 58.621826, y: 37.1105}
+        - {x: 10.621826, y: 59.1105}
+    outline: []
+  spritePackingTag: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
