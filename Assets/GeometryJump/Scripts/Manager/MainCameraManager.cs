@@ -26,6 +26,7 @@ namespace AppAdvisory.GeometryJump
 
 		void Awake()
 		{
+			gameManager.diamond += 500;
 			canZoom = false;
 		}
 

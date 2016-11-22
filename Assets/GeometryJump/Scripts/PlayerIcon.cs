@@ -19,7 +19,7 @@ using DG.Tweening;
 /// </summary>
 namespace AppAdvisory.GeometryJump
 {
-	public class MaskIcon : MonoBehaviorHelper
+	public class PlayerIcon : MonoBehaviorHelper
 	{
 		public Text[] texts;
 		public Image[] images;
@@ -27,16 +27,18 @@ namespace AppAdvisory.GeometryJump
 		public Button button;
 		public Text buttonText;
 
-		public GameObject lockImage;
-
 		string id = null;
 
 		public int price;
 
 		public Image spriteMask;
 
+		[SerializeField] private Diamond DIAMOND;
+
+
 		void Awake()
 		{
+			
 			button = GetComponentInChildren<Button>();
 			buttonText = button.transform.GetComponentInChildren<Text>();
 
@@ -75,19 +77,30 @@ namespace AppAdvisory.GeometryJump
 
 			buttonText.text = text;
 
-			lockImage.SetActive(!IsUnlock);
-
 			button.onClick.AddListener(() => {
+
+				this.DIAMOND = new Diamond();
+
+				Debug.Log (this.DIAMOND.GetDiamond() + " " + this.DIAMOND.GetPurchase() );
+
 				if(IsUnlock)
 				{
+//					this.DIAMOND.SetDiamond(10000);
+//					this.DIAMOND.Save();
+
 					ChangePlayerMask();
 				}
 				else
 				{
-					Debug.Log("unlock");
-					if(price <= gameManager.diamond)
+
+
+					//Debug.Log("unlock");
+					if(price <= this.DIAMOND.GetDiamond())
 					{
-						gameManager.diamond -= price;
+						this.DIAMOND.AddDiamond(-price);
+						this.DIAMOND.AddPurchase(1);
+						this.DIAMOND.Save();
+
 						IsUnlock = true;
 						Logic();
 						ChangePlayerMask();
@@ -103,15 +116,18 @@ namespace AppAdvisory.GeometryJump
 
 		void ChangePlayerMask()
 		{
-			Transform t = transform.FindChild("Mask");
+			Transform t = transform.FindChild("Image");
 			if(t == null)
 			{
 				playerManager.SetMask(null);
 				return;
 			}
 			Image i = t.GetComponent<Image>();
+			Debug.Log (i);
 			Sprite s = i.sprite;
-			playerManager.SetMask(s);
+			Debug.Log (s);
+
+			//playerManager.SetMask(s);
 		}
 
 		float alpha
