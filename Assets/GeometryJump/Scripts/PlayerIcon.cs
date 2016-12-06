@@ -127,7 +127,7 @@ namespace AppAdvisory.GeometryJump
 			Sprite s = i.sprite;
 			Debug.Log (s);
 
-			//playerManager.SetMask(s);
+			playerManager.SetMask(s);
 		}
 
 		float alpha

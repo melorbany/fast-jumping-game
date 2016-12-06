@@ -36,8 +36,8 @@ public class GameUILocalization : MonoBehaviour {
 			restart.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("restart"));
 			lastScoreTriangle.GetComponent<TextMesh>().text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("lastScore"));
 			bestScoreTriangle.GetComponent<TextMesh>().text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("bestScore"));
-			getLife.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("get"));
-			getDiamond.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("get"));
+//			getLife.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("get"));
+//			getDiamond.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("get"));
 
 
 		} else {
@@ -51,8 +51,8 @@ public class GameUILocalization : MonoBehaviour {
 			restart.text = LanguageManager.Instance.GetTextValue ("restart");
 			lastScoreTriangle.GetComponent<TextMesh>().text = LanguageManager.Instance.GetTextValue ("lastScore");
 			bestScoreTriangle.GetComponent<TextMesh>().text = LanguageManager.Instance.GetTextValue ("bestScore");
-			getLife.text = LanguageManager.Instance.GetTextValue ("get");
-			getDiamond.text = LanguageManager.Instance.GetTextValue ("get");
+	//		getLife.text = LanguageManager.Instance.GetTextValue ("get");
+	//		getDiamond.text = LanguageManager.Instance.GetTextValue ("get");
 
 		}
 

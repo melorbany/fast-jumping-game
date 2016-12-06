@@ -55,6 +55,7 @@ namespace AppAdvisory.GeometryJump
 		{
 			Sprite s = null;
 			int num = PlayerPrefs.GetInt("MASK",0);
+			Debug.Log (num);
 			s = listMask[num];
 			mask.sprite = s;
 			mask.gameObject.SetActive(s != null);
@@ -107,8 +108,9 @@ namespace AppAdvisory.GeometryJump
 		{
 			listMask = new List<Sprite>();
 
-			var maskIcons = canvasManager.gameObject.GetComponentsInChildren<MaskIcon>(true);
+			var maskIcons = canvasManager.gameObject.GetComponentsInChildren<PlayerIcon>(true);
 
+			Debug.Log (maskIcons.Length);
 			foreach(var m in maskIcons)
 			{
 				Sprite s = null;
