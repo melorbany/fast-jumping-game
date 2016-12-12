@@ -57,6 +57,9 @@ namespace AppAdvisory.GeometryJump
 		[SerializeField] private Button buttonGetFreeDiamonds;
 		[SerializeField] private Button buttonRestart;
 		[SerializeField] private Button buttonCloseMask;
+		[SerializeField] private Button buttonLeaderBoard;
+		[SerializeField] private Button buttonSound;
+
 
 		public AnimationTransitionManager m_animationTransitionManager;
 		public AnimationTransition m_animationTransition;
@@ -312,11 +315,15 @@ namespace AppAdvisory.GeometryJump
 				OnClickedRestart();
 			else if (b.name.Contains("ButtonMask"))
 				OnClickedButtonMask();
+			else if (b.name.Contains("ButtonSounds"))
+				OnClickedButtonMask();
+			else if (b.name.Contains("ButtonLeaderBoard"))
+				OnClickedButtonMask();
 		}
 
 		void OnClickedButtonMask()
 		{
-			canvasGroupMaskShop.alpha = 0;
+			/*canvasGroupMaskShop.alpha = 0;
 			canvasGroupMaskShop.gameObject.SetActive(true);
 
 			canvasGroupMaskShop.DOFade(1,1);
@@ -324,7 +331,10 @@ namespace AppAdvisory.GeometryJump
 			canvasGroupMaskShop.interactable = true;
 			canvasGroupMaskShop.blocksRaycasts = true;
 
-			buttonCloseMask.onClick.AddListener(CloseButtonMask);
+			buttonCloseMask.onClick.AddListener(CloseButtonMask);*/
+
+			SceneManager.LoadScene("Store");
+
 		}
 
 		void CloseButtonMask()

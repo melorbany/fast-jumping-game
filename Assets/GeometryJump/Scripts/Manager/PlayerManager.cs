@@ -18,6 +18,9 @@ using DG.Tweening;
 /// <summary>
 /// Class in charge to manage the player
 /// </summary>
+using UnityEngine.SceneManagement;
+
+
 namespace AppAdvisory.GeometryJump
 {
 	public class PlayerManager : MonoBehaviorHelper
@@ -47,9 +50,12 @@ namespace AppAdvisory.GeometryJump
 					print("mask " + i);
 					PlayerPrefs.SetInt("MASK",i);
 					PlayerPrefs.Save();
-					return;
+					break;
 				}
 			}
+
+			SceneManager.LoadScene("Main");
+
 		}
 		void ChangePlayerMask()
 		{
@@ -57,7 +63,14 @@ namespace AppAdvisory.GeometryJump
 			int num = PlayerPrefs.GetInt("MASK",0);
 			Debug.Log (num);
 			s = listMask[num];
+
 			mask.sprite = s;
+		
+			//Debug.Log (mask.transform.position);
+
+			//Vector3 scale = n
+			//transform.localScale = scale;
+
 			mask.gameObject.SetActive(s != null);
 		}
 		void OnAnimationTransitionOutStart()
