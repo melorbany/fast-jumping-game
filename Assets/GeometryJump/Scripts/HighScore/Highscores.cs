@@ -5,8 +5,8 @@ using System.Text.RegularExpressions;
 public class Highscores : MonoBehaviour {
 
 	public static Highscores instance;
-	const string privateCode = "US3XfEHZx0urj7vrRa2VjAJo9ekyuay061xWEHg1kfzw";
-	const string publicCode = "5823ffb88af6031150994692";
+	const string privateCode = "DYJAPcAjQkGZfvBUEV0pdAogPqYeRh7k-by_N9ZNmi1g";
+	const string publicCode = "584f83a18af6030e2c7cff9f";
 	const string webURL = "http://dreamlo.com/lb/";
 	const string idSperator = "VKHVQ";
 	const string teamSperator = "PDMWY";

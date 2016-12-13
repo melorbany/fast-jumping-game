@@ -314,11 +314,11 @@ namespace AppAdvisory.GeometryJump
 			else if (b.name.Contains("GameOver"))
 				OnClickedRestart();
 			else if (b.name.Contains("ButtonMask"))
-				OnClickedButtonMask();
+				SceneManager.LoadScene("Store");
 			else if (b.name.Contains("ButtonSounds"))
 				OnClickedButtonMask();
 			else if (b.name.Contains("ButtonLeaderBoard"))
-				OnClickedButtonMask();
+				SceneManager.LoadScene("Scores");
 		}
 
 		void OnClickedButtonMask()
