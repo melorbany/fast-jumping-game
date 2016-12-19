@@ -1,0 +1,7 @@
+Droppy Dots Link:
+
+		http://u3d.as/oKw
+
+
+Please read the doc to get it works 
+( especially the first line about Dotween ==> you have to import and setup Dotween to make it works. Dotween link: http://u3d.as/aZ1 )
