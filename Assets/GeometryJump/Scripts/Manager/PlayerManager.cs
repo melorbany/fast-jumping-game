@@ -43,7 +43,7 @@ namespace AppAdvisory.GeometryJump
 				return;
 			}
 
-			for(int i = 1; i < listMask.Count; i++)
+			for(int i = 0; i < listMask.Count; i++)
 			{
 				if(string.Equals(s.name, listMask[i].name))
 				{

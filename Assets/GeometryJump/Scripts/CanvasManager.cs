@@ -35,7 +35,7 @@ namespace AppAdvisory.GeometryJump
 		/// <summary>
 		/// We show ads - interstitials - ever 10 game over by default. To change it, change this number. You have to get "Very Simple Ad" from the asset store to use it: http://u3d.as/oWD
 		/// </summary>
-		public int numberOfPlayToShowInterstitial = 5;
+		public int numberOfPlayToShowInterstitial=1;
 
 		public string VerySimpleAdsURL = "http://u3d.as/oWD";
 
@@ -58,7 +58,6 @@ namespace AppAdvisory.GeometryJump
 		[SerializeField] private Button buttonRestart;
 		[SerializeField] private Button buttonCloseMask;
 		[SerializeField] private Button buttonLeaderBoard;
-		[SerializeField] private Button buttonSound;
 
 
 		public AnimationTransitionManager m_animationTransitionManager;
@@ -155,6 +154,9 @@ namespace AppAdvisory.GeometryJump
 			canvasGroupGameOver.gameObject.SetActive(false);
 
 			SetDiamondText(gameManager.diamond);
+
+
+
 		}
 
 		void ButtonLogic()
@@ -315,8 +317,6 @@ namespace AppAdvisory.GeometryJump
 				OnClickedRestart();
 			else if (b.name.Contains("ButtonMask"))
 				SceneManager.LoadScene("Store");
-			else if (b.name.Contains("ButtonSounds"))
-				OnClickedButtonMask();
 			else if (b.name.Contains("ButtonLeaderBoard"))
 				SceneManager.LoadScene("Scores");
 		}
@@ -336,6 +336,8 @@ namespace AppAdvisory.GeometryJump
 			SceneManager.LoadScene("Store");
 
 		}
+
+
 
 		void CloseButtonMask()
 		{
@@ -407,6 +409,8 @@ namespace AppAdvisory.GeometryJump
 		/// </summary>
 		public void ShowAds()
 		{
+
+			Debug.Log ("SHOW ADS");
 			int count = PlayerPrefs.GetInt("GAMEOVER_COUNT",0);
 			count++;
 			PlayerPrefs.SetInt("GAMEOVER_COUNT",count);

@@ -15,6 +15,9 @@ using System.Collections;
 /// <summary>
 /// Class in charge to manage the sound in the game
 /// </summary>
+using UnityEngine.UI;
+
+
 namespace AppAdvisory.GeometryJump
 {
 	public class SoundManager : MonoBehaviorHelper
@@ -29,6 +32,10 @@ namespace AppAdvisory.GeometryJump
 		public AudioClip jumpFX;
 		public AudioClip coinFX;
 
+		[SerializeField] public Button buttonSound;
+		[SerializeField] public Sprite[] soundBtnSprites; //1 for off and 0 for on
+
+
 		void OnEnable()
 		{
 			GameManager.OnSetDiamond += PlayCoinFX;
@@ -41,7 +48,24 @@ namespace AppAdvisory.GeometryJump
 
 		void Start()
 		{
-			PlayMusicGame();
+			
+			if ( PlayerPrefs.GetInt("MUTE_SOUND",0) == 0)
+			{
+				AudioListener.volume = 1;
+				//MusicController.instance.PlayBgMusic();
+				PlayMusicGame();
+				buttonSound.transform.GetChild(0).GetComponent<Image>().sprite = soundBtnSprites[1];
+
+			}
+			else
+			{
+				AudioListener.volume = 0;
+				//MusicController.instance.StopBgMusic();
+				MuteAllMusic();
+				buttonSound.transform.GetChild(0).GetComponent<Image>().sprite = soundBtnSprites[0];
+
+			}
+
 		}
 
 		private void PlayMusicGame()
@@ -98,6 +122,34 @@ namespace AppAdvisory.GeometryJump
 		{
 			music.Play();
 			fx.Play();
+		}
+			
+
+		public void SoundBtn()
+		{
+
+			//		PlayBtn();
+			//        sound.Play();
+
+			if (PlayerPrefs.GetInt("MUTE_SOUND",0) == 0)
+			{
+				Debug.Log ("sound mute");
+				AudioListener.volume = 0;
+				buttonSound.transform.GetChild(0).GetComponent<Image>().sprite = soundBtnSprites[0];
+				PlayerPrefs.SetInt ("MUTE_SOUND", 1);
+				PlayerPrefs.Save ();
+				MuteAllMusic ();
+			}
+			else
+			{
+				Debug.Log ("sound play");
+				AudioListener.volume = 1;
+				buttonSound.transform.GetChild(0).GetComponent<Image>().sprite = soundBtnSprites[1];
+				PlayerPrefs.SetInt ("MUTE_SOUND", 0);
+				PlayerPrefs.Save ();
+				PlayMusicGame();
+
+			}
 		}
 	}
 }

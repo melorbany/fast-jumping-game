@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoresManager : MonoBehaviour {
 
@@ -59,6 +60,12 @@ public class ScoresManager : MonoBehaviour {
 
 		canvasGroupRegister.gameObject.SetActive(false);
 
+	}
+
+
+	public void OnClickedButtonPlay()
+	{
+		SceneManager.LoadScene("Main");
 	}
 
 
