@@ -116,11 +116,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+	<data name="back" xml:space="preserve">
+		<value>العودة</value>
+	</data>
 	<data name="best" xml:space="preserve">
 		<value>الآفضل</value>
 	</data>
 	<data name="bestScore" xml:space="preserve">
 		<value>أفضل نتيجة</value>
+	</data>
+	<data name="close" xml:space="preserve">
+		<value>خروج</value>
 	</data>
 	<data name="continue" xml:space="preserve">
 		<value>استمرار اللعب</value>
@@ -137,13 +143,28 @@
 	<data name="longJump" xml:space="preserve">
 		<value>القفز الطويل</value>
 	</data>
+	<data name="name" xml:space="preserve">
+		<value>اسمك ...</value>
+	</data>
+	<data name="play" xml:space="preserve">
+		<value>العب</value>
+	</data>
 	<data name="restart" xml:space="preserve">
 		<value>إعادة المحاولة</value>
 	</data>
 	<data name="score" xml:space="preserve">
 		<value>النتيجة</value>
 	</data>
+	<data name="select" xml:space="preserve">
+		<value>اختار</value>
+	</data>
 	<data name="shortJump" xml:space="preserve">
 		<value>القفز القصير</value>
+	</data>
+	<data name="topPlayers" xml:space="preserve">
+		<value>افضل الاعبين</value>
+	</data>
+	<data name="unlock" xml:space="preserve">
+		<value>اشتري</value>
 	</data>
 </root>

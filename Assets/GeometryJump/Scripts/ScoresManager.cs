@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using SmartLocalization;
+using ArabicSupport;
 
 public class ScoresManager : MonoBehaviour {
 
@@ -9,6 +11,9 @@ public class ScoresManager : MonoBehaviour {
 	[SerializeField] private CanvasGroup canvasGroupRegister;
 	[SerializeField] private InputField inputFieldRegister;
 	[SerializeField] private Button buttonRegister;
+	[SerializeField] private Text namePlaceholderText;
+	[SerializeField] private Text buttonBack;
+
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +23,27 @@ public class ScoresManager : MonoBehaviour {
 
 		buttonRegister.GetComponent<Button>().onClick.AddListener(() => { RegisterBtn(); });    //play
 
+
+		string language = LanguageManager.Instance.GetSystemLanguageEnglishName ();
+		if (LanguageManager.Instance.IsLanguageSupportedEnglishName (language)) {
+			LanguageManager.Instance.ChangeLanguage (LanguageManager.Instance.GetDeviceCultureIfSupported ());
+		} else {
+			LanguageManager.Instance.ChangeLanguage ("en");
+		}
+
+		LanguageManager.Instance.ChangeLanguage ("ar");
+
+		if (true /*LanguageManager.Instance.GetDeviceCultureIfSupported () != null && 
+			LanguageManager.Instance.GetDeviceCultureIfSupported ().languageCode.Equals ("ar")*/) {
+
+			namePlaceholderText.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("name"));
+			buttonBack.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("back"));
+
+		} else {
+
+			namePlaceholderText.text = LanguageManager.Instance.GetTextValue ("name");
+			buttonBack.text = LanguageManager.Instance.GetTextValue ("back");
+		}
 
 
 	}

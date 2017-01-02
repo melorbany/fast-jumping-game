@@ -5,6 +5,8 @@
  * App Advisory Unity Asset Store catalog: http://u3d.as/9cs											   *
  * Developed by Gilbert Anthony Barouch - https://www.linkedin.com/in/ganbarouch                           *
  ***********************************************************************************************************/
+using SmartLocalization;
+using ArabicSupport;
 
 
 
@@ -137,11 +139,32 @@ namespace AppAdvisory.GeometryJump
 
 		void Start()
 		{
+
+
+			string language = LanguageManager.Instance.GetSystemLanguageEnglishName ();
+			if (LanguageManager.Instance.IsLanguageSupportedEnglishName (language)) {
+				LanguageManager.Instance.ChangeLanguage (LanguageManager.Instance.GetDeviceCultureIfSupported ());
+			} else {
+				LanguageManager.Instance.ChangeLanguage ("en");
+			}
+
+			LanguageManager.Instance.ChangeLanguage ("ar");
+
+			if (true /*LanguageManager.Instance.GetDeviceCultureIfSupported () != null && 
+			LanguageManager.Instance.GetDeviceCultureIfSupported ().languageCode.Equals ("ar")*/) {
+
+				lastScoreText.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("last"))  + ": " + gameManager.GestLastScore();
+
+			} else {
+				lastScoreText.text = LanguageManager.Instance.GetTextValue ("last")  + ": " + gameManager.GestLastScore();
+			}
+
+
+
 			SetBestScoreText(gameManager.GestBestScore());
 
 			SetPointText(0);
 
-			lastScoreText.text = "Last: " + gameManager.GestLastScore();
 
 			lifeText.text = "x " + gameManager.GetLife().ToString();
 
@@ -236,7 +259,15 @@ namespace AppAdvisory.GeometryJump
 
 		void SetBestScoreText(int p)
 		{
-			bestScoreText.text = "best: " + p.ToString();
+			if (true /*LanguageManager.Instance.GetDeviceCultureIfSupported () != null && 
+			LanguageManager.Instance.GetDeviceCultureIfSupported ().languageCode.Equals ("ar")*/) {
+
+				bestScoreText.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("best"))  + ": " + p.ToString();
+
+			} else {
+				bestScoreText.text = LanguageManager.Instance.GetTextValue ("best")  + ": " +  p.ToString();
+			}
+				
 		}
 
 		public void SetCanvasGroupInstructionAlpha(float fromA, float toA)
@@ -381,7 +412,7 @@ namespace AppAdvisory.GeometryJump
 				}
 				ButtonLogic();
 				AddButtonListener();
-				buttonGetFreeLife.gameObject.SetActive(false);
+				//buttonGetFreeLife.gameObject.SetActive(false);
 			});
 			#endif
 		}
@@ -417,7 +448,7 @@ namespace AppAdvisory.GeometryJump
 			PlayerPrefs.Save();
 
 			#if APPADVISORY_ADS
-			if(count > numberOfPlayToShowInterstitial)
+			if(count >= numberOfPlayToShowInterstitial)
 			{
 				print("count = " + count + " > numberOfPlayToShowINterstitial = " + numberOfPlayToShowInterstitial);
 

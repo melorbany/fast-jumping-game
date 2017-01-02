@@ -17,6 +17,10 @@ using DG.Tweening;
 /// <summary>
 /// Class in charge to manage the mask icons in the character shop
 /// </summary>
+using SmartLocalization;
+using ArabicSupport;
+
+
 namespace AppAdvisory.GeometryJump
 {
 	public class PlayerIcon : MonoBehaviorHelper
@@ -30,7 +34,7 @@ namespace AppAdvisory.GeometryJump
 		string id = null;
 
 		public int price;
-
+		public string unlockString = "Unlock", selectString = "Select"; 
 		public Image spriteMask;
 
 		[SerializeField] private Diamond DIAMOND;
@@ -43,6 +47,33 @@ namespace AppAdvisory.GeometryJump
 			buttonText = button.transform.GetComponentInChildren<Text>();
 
 			Logic();
+		}
+
+		void Start()
+		{
+
+			string language = LanguageManager.Instance.GetSystemLanguageEnglishName ();
+			if (LanguageManager.Instance.IsLanguageSupportedEnglishName (language)) {
+				LanguageManager.Instance.ChangeLanguage (LanguageManager.Instance.GetDeviceCultureIfSupported ());
+			} else {
+				LanguageManager.Instance.ChangeLanguage ("en");
+			}
+
+			LanguageManager.Instance.ChangeLanguage ("ar");
+
+			if (true /*LanguageManager.Instance.GetDeviceCultureIfSupported () != null && 
+			LanguageManager.Instance.GetDeviceCultureIfSupported ().languageCode.Equals ("ar")*/) {
+
+				unlockString = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("unlock"));
+				selectString = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("select"));
+
+			} else {
+				
+				unlockString = LanguageManager.Instance.GetTextValue ("unlock");
+				selectString = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("select"));
+			}
+
+
 		}
 
 		void OnEnable()
@@ -143,8 +174,7 @@ namespace AppAdvisory.GeometryJump
 		{
 			get
 			{
-				string s = IsUnlock ? "SELECT" : ("UNLOCK");
-
+				string s = IsUnlock ? selectString : unlockString;
 				return s;
 			}
 		}

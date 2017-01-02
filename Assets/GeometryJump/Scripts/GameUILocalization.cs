@@ -27,8 +27,8 @@ public class GameUILocalization : MonoBehaviour {
 			LanguageManager.Instance.GetDeviceCultureIfSupported ().languageCode.Equals ("ar")*/) {
 
 
-			best.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("best"));
-			last.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("last"));
+//			best.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("best")) ;
+//			last.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("last"));
 			shortJump.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("shortJump"));
 			longJump.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("longJump"));
 			continueLive.text = ArabicFixer.Fix (LanguageManager.Instance.GetTextValue ("continue"));
@@ -42,8 +42,8 @@ public class GameUILocalization : MonoBehaviour {
 
 		} else {
 			
-			best.text = LanguageManager.Instance.GetTextValue ("best");
-			last.text = LanguageManager.Instance.GetTextValue ("last");
+//			best.text = LanguageManager.Instance.GetTextValue ("best");
+//			last.text = LanguageManager.Instance.GetTextValue ("last");
 			shortJump.text = LanguageManager.Instance.GetTextValue ("shortJump");
 			longJump.text = LanguageManager.Instance.GetTextValue ("longJump");
 			continueLive.text = LanguageManager.Instance.GetTextValue ("continue");

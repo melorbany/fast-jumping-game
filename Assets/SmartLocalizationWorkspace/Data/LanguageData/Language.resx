@@ -116,8 +116,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+	<data name="back" xml:space="preserve">
+		<value>Back</value>
+	</data>
 	<data name="best" xml:space="preserve">
 		<value>Best</value>
+	</data>
+	<data name="bestScore" xml:space="preserve">
+		<value>Best Score</value>
+	</data>
+	<data name="close" xml:space="preserve">
+		<value>Close</value>
 	</data>
 	<data name="continue" xml:space="preserve">
 		<value>Continue</value>
@@ -128,8 +137,17 @@
 	<data name="last" xml:space="preserve">
 		<value>Last</value>
 	</data>
+	<data name="lastScore" xml:space="preserve">
+		<value>Last Score</value>
+	</data>
 	<data name="longJump" xml:space="preserve">
 		<value>Long Jump</value>
+	</data>
+	<data name="name" xml:space="preserve">
+		<value>Your Name ...</value>
+	</data>
+	<data name="play" xml:space="preserve">
+		<value>Play</value>
 	</data>
 	<data name="restart" xml:space="preserve">
 		<value>Restart</value>
@@ -137,13 +155,16 @@
 	<data name="score" xml:space="preserve">
 		<value>Score</value>
 	</data>
+	<data name="select" xml:space="preserve">
+		<value>Select</value>
+	</data>
 	<data name="shortJump" xml:space="preserve">
 		<value>Short Jump</value>
 	</data>
-	<data name="lastScore" xml:space="preserve">
-		<value>Last Score</value>
+	<data name="topPlayers" xml:space="preserve">
+		<value>Top Players</value>
 	</data>
-	<data name="bestScore" xml:space="preserve">
-		<value>Best Score</value>
+	<data name="unlock" xml:space="preserve">
+		<value>Unlock</value>
 	</data>
 </root>
